@@ -1,6 +1,9 @@
 import React,{useEffect, useState} from "react";
 import Recipe from './recipe';
 import "./App.css";
+import "./Registration.js";
+
+
 
 const App = () =>{
   const APP_ID = "f4221e67";
@@ -18,7 +21,7 @@ const App = () =>{
   const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
   const data =await response.json(); 
   setRecipes(data.hits);
-  console.log(data.hits);
+  /* console.log(data.hits); */
   }
 
 
@@ -32,9 +35,21 @@ const App = () =>{
     setSearch("");
   }
 
+ 
+
   return(
+      
+
     <div className="App">
-      <h1 className="title">Search for your food</h1>
+
+      <div className="button_RL">
+      <a href="/Registration.js">
+        <img src="/Images/registration.png"></img>
+      </a>
+        <img src="/Images/login.png"></img>
+      </div>  
+
+      <h1 className="title">Search</h1>
       <form className="search-form" onSubmit={getSearch}>
         <input className="search-bar" type="text" value={search} onChange={updateSearch}></input>
         <button className="search-button" type="submit"> Search </button>

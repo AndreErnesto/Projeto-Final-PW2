@@ -8,6 +8,19 @@
   font-style: oblique;
   color:rgb(255, 255, 255);
 }
+
+.button_RL{
+  display: flex;
+  justify-content:flex-end;
+}
+/* .registar{
+  align-items: ;
+}
+
+.login{
+
+} */
+
 .search-form{
   min-height: 10vh;
   display: flex;
