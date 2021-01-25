@@ -1,13 +1,17 @@
-/* import react from "react";
-import {BrowserRouter} from "react-router-dom"; */
+import React from 'react';
+/* import "./App.css"; */
 
-/* export class Registration extends Comment{
+function Registration(){
+    return(
+        
+        <div className="Registration">
 
-    render(){
-        return(
+            <h1>Registration</h1>
 
-               <p>Algo</p> 
+        </div>
 
-        );
-    };
-} */
+
+    )
+}   
+
+export default Registration;

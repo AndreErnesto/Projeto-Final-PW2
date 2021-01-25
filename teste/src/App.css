@@ -1,6 +1,6 @@
 .App {
   min-height: 100vh;
-  background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+  background-color: #2E3D59;
 }
 
 .title{
@@ -9,17 +9,27 @@
   color:rgb(255, 255, 255);
 }
 
-.button_RL{
+/* Estilo do nav */
+
+nav{
   display: flex;
-  justify-content:flex-end;
-}
-/* .registar{
-  align-items: ;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 10vh;
+  background-color: #49F2C2;
+  color:#49F2C2;
 }
 
-.login{
+.nav-links{
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
 
-} */
+
+/* Página das receitas */
 
 .search-form{
   min-height: 10vh;
