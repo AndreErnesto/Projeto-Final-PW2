@@ -1,7 +1,9 @@
 import React,{useEffect, useState} from "react";
+import {Link, Route, BrowserRouter} from "react-router-dom";
 import Recipe from './recipe';
 import "./App.css";
 import "./Registration.js";
+
 
 
 
@@ -35,19 +37,39 @@ const App = () =>{
     setSearch("");
   }
 
- 
+  const Registration=()=>{
+    
+    <p>Hue</p>
+
+  }
 
   return(
       
 
     <div className="App">
+      
+      <BrowserRouter>
+      
+      <nav className="navbar navbar-default">
+        <div className="container">
+          <div className="navbar-header">
+            <ul className="nav navbar-nav">
+            <li><Link to={"/App"} >Home</Link></li>   
+              <li><Link to={"/Registration"}>Registration</Link></li>   
+            </ul>
+          </div>
+        </div>  
 
-      <div className="button_RL">
-      <a href="/Registration.js">
-        <img src="/Images/registration.png"></img>
-      </a>
-        <img src="/Images/login.png"></img>
-      </div>  
+      </nav>
+
+      
+      <Route path="/" exact component={App} exact={true} />
+      <Route path="/Registration"  component={Registration} />
+
+      </BrowserRouter>
+      
+
+      
 
       <h1 className="title">Search</h1>
       <form className="search-form" onSubmit={getSearch}>
@@ -67,5 +89,6 @@ const App = () =>{
     </div>
   );
 };
+
 
 export default App;
