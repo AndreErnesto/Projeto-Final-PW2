@@ -7,7 +7,8 @@
     flex-direction:column;
     justify-content: space-around;
     flex-wrap: wrap;
-    background: White;
+    background: #ffffff;
     align-items: center;
-    min-width: 50%;
+    min-width: 40%;
+    max-width: 40%;
 }

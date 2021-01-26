@@ -38,7 +38,7 @@ const Recipes = () =>{
       
     <div className="Recipes">
 
-      <h1 className="title">Search</h1>
+      <h1 className="title">Search for the food</h1>
       <form className="search-form" onSubmit={getSearch}>
         <input className="search-bar" type="text" value={search} onChange={updateSearch}></input>
         <button className="search-button" type="submit"> Search </button>
