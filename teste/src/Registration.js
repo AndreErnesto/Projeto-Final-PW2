@@ -1,69 +1,64 @@
-import React, {useState,useEffect} from 'react';
-import {useHistory} from "react-router-dom";
+import React, { Component } from 'react'
+import axios from 'axios'
+import "./form.css"
 
-/* import "./form.css"; */
-/* import "./App.css"; */
+class PostForm extends Component {
+	constructor(props) {
+		super(props)
 
+		this.state = {
+			Nome: '',
+			password: ''
+		}
+	}
 
-function Registration(){
+	changeHandler = e => {
+		this.setState({ [e.target.name]: e.target.value })
+	}
 
-const[Nome,setNome]=useState("");
-const[password,setpassword]=useState("");
+	submitHandler = e => {
+		e.preventDefault()
+		console.log(this.state)
+		axios
+			.post('/Utilizadores', this.state)
+			.then(response => {
+				console.log(response)
+			})
+			.catch(error => {
+				console.log(error)
+			})
+	}
 
-
-
-const history = useHistory();
-useEffect(() =>{
-    if(localStorage.getItem("user-info")){
-        history.push("./login")
-    }
-},[])
-
-
-async function Register(){
-
-console.warn(Nome,password)
-let item={Nome,password};
-let result = await fetch("https://apipw2.herokuapp.com/Utilizadores",{
-    method:'POST',
-    headers:{
-            "Content-Type":"application/json",
-            "Accept":"application/json"
-        },
-    body:JSON.stringify(item)
-    });
-    result = await result.json();
-    localStorage.setItem("user-info",JSON.stringify(result))
-    history.push("./login")
-
+	render() {
+		const { Nome,password} = this.state
+		return (
+			<div>
+				<h1>Registration</h1>
+				<form className="form" onSubmit={this.submitHandler}>
+					<div>
+						<input
+							type="text"
+							name="Nome"
+							placeholder="Nome"
+							value={Nome}
+							onChange={this.changeHandler}
+						/>
+					</div>
+					<div>
+						<input
+							type="text"
+							name="password"
+							placeholder="Password"
+							value={password}
+							onChange={this.changeHandler}
+						/>
+					</div>
+					<button type="submit">Submit</button>
+				</form>
+			</div>
+		)
+	}
 }
-    return(
-        
-        <div className="Registration">
 
-            <h1>Registration</h1>
-
-            <form>
-                <div>
-                Username: 
-                    <input type="text" placeholder="nome"
-                     onChange={(e) => setNome(e.target.value)} className="nome"></input>
-                </div>
-                <br></br>
-                <div>
-                Password: 
-                    <input type="text" placeholder="password"
-                    onChange={(e) => setpassword(e.target.value)} className="password"></input>
-                </div>
-                <br></br>
-                <button onClick={Register} className="botão">Sign Up</button>
-            </form>
-
-        </div>
-
-
-    )
-}   
-
-export default Registration;
+export default PostForm
 
