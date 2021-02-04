@@ -12,6 +12,9 @@ function Nav(){
                 <Link style={NavStyle} to="/RecipesPage">
                 <img src="/images/recipes.png"></img>
                 </Link>
+                <Link style={NavStyle} to="/Favorites">
+                    <img src="/images/heart.png"></img>
+                </Link>
                 <Link style={NavStyle} to="/Registration">
                     <img src="/images/registration.png"></img>
                 </Link>

@@ -4,6 +4,7 @@ import Nav from "./nav";
 import Login from "./login";
 import Registration from "./Registration";
 import Recipes from "./RecipesPage";
+import Favorites from "./Favorites";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
   function App(){
@@ -17,6 +18,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
           <Route path="/RecipesPage" component={Recipes}></Route>
           <Route path="/Registration" component={Registration}></Route>
           <Route path="/Login" component={Login}></Route>
+          <Route path="/Favorites" component={Favorites}></Route>
         </Switch>
       </Router>
       </div>

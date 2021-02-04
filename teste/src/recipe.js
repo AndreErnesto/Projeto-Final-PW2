@@ -12,9 +12,11 @@ const Recipe = ({title,calories,image,ingredients}) =>{
            </ol>
            <p>{calories}</p>
            <img src={image} alt=""></img>
+           <button className="favorites" type="submit">Add to favorites</button>
        </div>     
     );
 }
 
 
 export default Recipe;
+

@@ -1,0 +1,22 @@
+.favoritos{
+    border-radius: 10px;
+    box-shadow: 0px 5px 20 px rgb(50,50,50);
+    margin: 20px;
+    padding: 20px;
+    margin-left: 32%;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    background: #ffffff;
+    align-items: center;
+    min-width: 30%;
+    max-width: 30%;
+}
+
+.loading{
+    color: #49F2C2;
+    text-align: center;
+    font-size:50px;
+    font-style: italic;
+}

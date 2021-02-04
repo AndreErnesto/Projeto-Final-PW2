@@ -3,7 +3,7 @@ import axios from 'axios'
 import "./form.css"
 
 
-class PostForm extends Component {
+class GetForm extends Component {
 
 
 	constructor(props) {
@@ -29,7 +29,6 @@ class PostForm extends Component {
 				const found = response.data.find(user => user.Nome == this.state.Nome && user.password == this.state.password);
 				console.log(found)
 				if(found){
-					
 					console.log("Change page")
 				}
 			})
@@ -73,4 +72,4 @@ class PostForm extends Component {
 }
 
 
-export default PostForm
+export default GetForm
