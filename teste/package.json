@@ -2,7 +2,7 @@
   "name": "teste",
   "version": "0.1.0",
   "private": true,
-  "proxy":"https://apipw2.herokuapp.com",
+  "proxy":"https://pw2foodapi.herokuapp.com/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.1.2",
