@@ -33,14 +33,14 @@ class PostRecipe extends Component {
 		const {title,calories,image,ingredients} = this.state
             return(
                <div className={style.recipe}>
-                   <h1>{title}</h1>
-                   <ol>
+                   <h1 value={title}></h1>
+                   <ol value={ingredients}>
                        {ingredients.map(ingredient=>(
                            <li>{ingredient.text} </li>
                        ))}
                    </ol>
-                   <p>{calories}</p>
-                   <img src={image} alt=""></img>
+                   <p value={calories}></p>
+                   <img value={image}  alt=""></img>
                    <button className="favorites" type="submit" onSubmit={this.submitHandler}>Add to favorites</button>
                </div>     
             );
